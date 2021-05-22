@@ -26,9 +26,137 @@
     отступов и разделителей полей.
 
     Желоба можно адаптировать. Используйте классы желобов, зависящие от точки останова, для изменения 
-    горизонтальных желобов, вертикальных желобов и всех желобов. -->
+    горизонтальных желобов, вертикальных желобов и всех желобов. 
+
+    Горизонтальные gutters
+    .gx-* классы могут использоваться для управления шириной горизонтального желоба. .container 
+    или .container-fluid родитель может должен быть скорректирован , если более крупные желобов 
+    используются также, чтобы избежать нежелательного переполнения, с помощью утилиты сопоставления 
+    дополнени. Например, в следующем примере мы увеличили отступ с помощью .px-4:-->
 
 
+    <div class="container px-4">
+        <div class="row gx-5">
+            <div class="col">
+                <div class="p-3 border bg-light">Пользовательские отступы столбцов</div>
+            </div>
+            <div class="col">
+                <div class="p-3 border bg-light">Пользовательские отступы столбцов</div>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <!-- Альтернативным решением является добавление обертку вокруг .row с классом .overflow-hidden: -->
+    <div class="container overflow-hidden">
+        <div class="row gx-5">
+            <div class="col">
+                <div class="p-3 border bg-light">Пользовательские отступы столбцов</div>
+            </div>
+            <div class="col">
+                <div class="p-3 border bg-light">Пользовательские отступы столбцов</div>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <!-- Вертикальные gutters
+    .gy-* классы могут использоваться для управления шириной вертикального желоба. Как и горизонтальные 
+    желоба, вертикальные желоба могут вызвать некоторое переполнение под кромкой .row в конце страницы. 
+    В этом случае вы добавляете оболочку .row вместе с .overflow-hidden классом: -->
+    <div class="container overflow-hidden">
+        <div class="row gy-5">
+            <div class="col-6">
+                <div class="p-3 border bg-light">Пользовательские отступы столбцов</div>
+            </div>
+            <div class="col-6">
+                <div class="p-3 border bg-light">Пользовательские отступы столбцов</div>
+            </div>
+            <div class="col-6">
+                <div class="p-3 border bg-light">Пользовательские отступы столбцов</div>
+            </div>
+            <div class="col-6">
+                <div class="p-3 border bg-light">Пользовательские отступы столбцов</div>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <!-- Горизонтальные и вертикальные gutters
+    .g-* классы могут использоваться для управления шириной горизонтального желоба, в следующем примере 
+    мы используем меньшую ширину желоба, поэтому нет необходимости добавлять .overflow-hidden 
+    класс-оболочку. -->
+    <div class="container">
+        <div class="row g-2">
+            <div class="col-6">
+                <div class="p-3 border bg-light">Пользовательские отступы столбцов</div>
+            </div>
+            <div class="col-6">
+                <div class="p-3 border bg-light">Пользовательские отступы столбцов</div>
+            </div>
+            <div class="col-6">
+                <div class="p-3 border bg-light">Пользовательские отступы столбцов</div>
+            </div>
+            <div class="col-6">
+                <div class="p-3 border bg-light">Пользовательские отступы столбцов</div>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <!-- Gutters рядных колонн
+    К столбцам строк также можно добавить классы желобов. В следующем примере мы используем 
+    адаптивные столбцы строк и адаптивные классы желобов. -->
+    <div class="container">
+        <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+            <div class="col">
+                <div class="p-3 border bg-light">Строка столбец</div>
+            </div>
+            <div class="col">
+                <div class="p-3 border bg-light">Строка столбец</div>
+            </div>
+            <div class="col">
+                <div class="p-3 border bg-light">Строка столбец</div>
+            </div>
+            <div class="col">
+                <div class="p-3 border bg-light">Строка столбец</div>
+            </div>
+            <div class="col">
+                <div class="p-3 border bg-light">Строка столбец</div>
+            </div>
+            <div class="col">
+                <div class="p-3 border bg-light">Строка столбец</div>
+            </div>
+            <div class="col">
+                <div class="p-3 border bg-light">Строка столбец</div>
+            </div>
+            <div class="col">
+                <div class="p-3 border bg-light">Строка столбец</div>
+            </div>
+            <div class="col">
+                <div class="p-3 border bg-light">Строка столбец</div>
+            </div>
+            <div class="col">
+                <div class="p-3 border bg-light">Строка столбец</div>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <!-- Без gutters
+    Промежутки между столбцами в наших предопределенных классах сетки можно удалить с помощью .g-0. 
+    Это удаляет отрицательные значения margin .row и горизонталь padding из всех непосредственных 
+    дочерних столбцов.
+
+    Нужен дизайн от края до края? Отбросьте родительский .container или .container-fluid.
+    На практике это выглядит так. Обратите внимание, что вы можете продолжать использовать 
+    это со всеми другими предопределенными классами сетки (включая ширину столбцов, адаптивные уровни, 
+    изменение порядка и т.д.). -->
+    <div class="row g-0">
+        <div class="col-sm-6 col-md-8 border bg-light">.col-sm-6 .col-md-8</div>
+        <div class="col-6 col-md-4 border bg-light">.col-6 .col-md-4</div>
+    </div>
+    <hr>
 
 
 
