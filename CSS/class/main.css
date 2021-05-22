@@ -1,0 +1,76 @@
+/*text-decoration - подчёркивание у ссылки*/
+.main_link {
+	color: red;
+	text-decoration: none;
+}
+
+/*hover - псеквдокласс, который применяет
+стили на наведённый объект
+text-decoration-color - цвет линии подчёркивания
+cursor - курсор*/
+.main_link:hover {
+	color: blue;
+	text-decoration: underline;
+	text-decoration-color: red;
+	cursor: pointer;
+}
+
+/*active - нажимание на объект*/
+.main_link:active {
+	text-decoration: line-through;
+}
+
+/*visited - устанавливает стили по ссылкам,
+по которым уже переходили*/
+.main_link:visited {
+	color:gray;
+}
+
+/*focus - срабатывает, когда навeли
+ курсор на текстовое поле*/
+input {
+	color: blue;
+}
+input:focus {
+	color: red;
+}
+
+/*Все р у которых класс text
+empty - пустые
+not(:empty) - не пустые*/
+p.text:not(:empty) {
+	color: gray;
+}
+
+/*after - псевдоэлемент
+content - применяется для after и тд выводит текст после 
+*/
+#some_id::after {
+	content: '123';
+	text-decoration: overline;
+	color: red;
+}
+
+p.text:empty::after {
+	content: attr(title);
+}
+
+/*before - до*/
+#some_id::before {
+	content: '789';
+	color: green;
+	text-decoration: underline;
+	text-decoration-color: grey;
+}
+
+/*first-letter - обращение к первому символу
+first-line - ... к первой линии*/
+p.main_link::first-letter {
+	color: green;
+}
+
+/*first-of-type - обращение к первому абзацу
+last-of-type - к последнему*/
+p::first-of-type {
+	text-decoration: line-through;
+}

@@ -1,0 +1,2 @@
+В терминале установим библиотеку
+    npm i react-router-dom -save

@@ -1,0 +1,48 @@
+/* * - обращение ко всем объектам
+нужно для удаление всех отступов в браузере*/
+* {
+	margin: 0;
+	padding: 0;
+}
+/*height лучше vh
+border - обводка
+	1 - ширина 2 - тип 3 - цвет
+	border-bottom. border-left...
+	border-radius - округление
+opacity - прозрачность
+
+margin - внешние отступы
+	margin-left...
+
+padding - внутринние отступы*/
+#block {
+	background: red;
+	height: 200px;
+	width: 300px;
+	border: 7px double silver;
+	border-bottom: 0;
+	border-top-style: solid; 
+
+	border-radius: 15px 30px;
+	opacity: 0.9;
+	margin: 20px 50px;
+	padding: 20px 50px;
+}
+ /*к строчным объектам не добавляется высота и ширина
+ display - тип обЬекта*/
+.block {
+	background: red;
+	height: 200px;
+	width: 300px;
+	border: 7px double silver;
+	border-bottom: 0;
+	border-top-style: solid; 
+
+	border-radius: 15px 30px;
+	opacity: 0.9;
+	margin: 20px 50px;
+	padding: 20px 50px;
+
+	display: block
+}
+

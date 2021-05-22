@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!-- Бутстрап сетка | grid
+
+    Используйте нашу мощную сетку flexbox, ориентированную на мобильные устройства,
+    для создания макетов всех форм и размеров благодаря системе из двенадцати столбцов,
+    шести адаптивным уровням по умолчанию, переменным и миксинам Sass, а также десяткам
+    предопределенных классов. -->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                Один из трех столбцов
+            </div>
+            <div class="col-sm">
+                Один из трех столбцов
+            </div>
+            <div class="col-sm">
+                Один из трех столбцов
+            </div>
+        </div>
+    </div>
+    <br>
+
+
+    <!-- Столбцы невероятно гибкие. В каждой строке доступно 12 столбцов шаблона,
+        что позволяет создавать различные комбинации элементов, охватывающих любое количество столбцов.
+        Классы столбцов указывают количество охватываемых столбцов
+        шаблона (например, col-4 четыре). width задаются в процентах, поэтому относительный размер
+        всегда один и тот же.
+
+        Желоба также адаптивны и настраиваются. Классы Gutter доступны во всех точках останова с теми
+        же размерами, что и наши поля и отступы . Измените горизонтальные желоба на .gx-* классы,
+        вертикальные желоба на .gy-* или все желоба на .g-* классы. .g-0 также доступен для удаления
+        желобов. -->
+
+    <!-- Система сеток Bootstrap может адаптироваться ко всем шести точкам останова по умолчанию
+        и любым настраиваемым вами точкам останова. Шесть уровней сетки по умолчанию следующие:
+
+        Очень маленький (xs)
+        Маленький (sm)
+        Средний (md)
+        Большой (lg)
+        Очень большой (xl)
+        Очень очень большой (xxl) -->
+
+    <!-- Столбцы с автоматической компоновкой
+
+        Используйте классы столбцов, специфичные для точки останова, для упрощения
+        определения размера столбца без явного нумерованного класса, например .col-sm-6. -->
+
+
+    <!-- Равной ширины
+
+        Например, вот два макета сетки, которые применяются к каждому устройству и окну просмотра,
+        от xs до xxl. Добавьте любое количество классов без единиц для каждой нужной точки останова,
+        и каждый столбец будет одинаковой ширины. -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col" style="background-color: rgb(190, 36, 36)">
+                1 из 2
+            </div>
+            <div class="col" style="background-color: rgb(51, 138, 138);">
+                2 из 2
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col" style="background-color: aqua;">
+                1 из 3
+            </div>
+            <div class="col" style="background-color: rgb(190, 36, 36)">
+                2 of 3
+            </div>
+            <div class="col" style="background-color: rgb(51, 138, 138);">
+                3 из 3
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <!-- Установка ширины одного столбца
+
+        Автоматическая компоновка столбцов сетки Flexbox также означает, что вы можете установить
+        ширину одного столбца и автоматически изменять размер столбцов-братьев вокруг него. Вы можете
+        использовать предопределенные классы сетки (как показано ниже), миксины сетки или встроенную
+        ширину. Обратите внимание, что размер других столбцов будет изменяться независимо от ширины
+        центрального столбца. -->
+    <div class="container">
+        <div class="row">
+            <div class="col" style="background-color: rgb(209, 115, 115);">
+                1 из 3
+            </div>
+            <div class="col-6" style="background-color: rgb(50, 112, 55);">
+                2 из 3 (wider)
+            </div>
+            <div class="col" style="background-color: rgb(19, 18, 110);">
+                3 из 3
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col" style="background-color: rgb(58, 211, 53);">
+                1 из 3
+            </div>
+            <div class="col-5" style="background-color: rgb(214, 31, 31);">
+                2 из 3 (wider)
+            </div>
+            <div class="col" style="background-color: rgb(209, 15, 128);">
+                3 из 3
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <!-- Содержимое переменной ширины
+
+        Используйте col-{ breakpoint }-auto классы для изменения размера столбцов на основе
+        естественной ширины их содержимого.-->
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col col-lg-2" style="background-color: aqua;">
+                1 из 3
+            </div>
+            <div class="col-md-auto" style="background-color: rgb(255, 255, 255);">
+                Содержимое переменной ширины
+            </div>
+            <div class="col col-lg-2" style="background-color: rgb(157, 255, 0);">
+                3 из 3
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col" style="background-color: rgb(255, 94, 0);">
+                1 из 3
+            </div>
+            <div class="col-md-auto" style="background-color: rgb(255, 0, 128);">
+                Содержимое переменной ширины
+            </div>
+            <div class="col col-lg-2" style="background-color: rgb(255, 238, 0);">
+                3 из 3
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <!-- Breakpoints
+
+        Для сетей , которые являются такими же , от самых маленьких устройств на самый большой,
+        использовать .col и .col-* классы. Укажите нумерованный класс, если вам нужен столбец
+        определенного размера; в противном случае не стесняйтесь придерживаться .col.-->
+    <div class="container">
+        <div class="row">
+            <div class="col" style="background-color: rgb(255, 238, 0);">col</div>
+            <div class="col" style="background-color: rgb(0, 255, 21);">col</div>
+            <div class="col" style="background-color: rgb(0, 60, 255);">col</div>
+            <div class="col" style="background-color: rgb(255, 0, 0);">col</div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-8" style="background-color: rgb(0, 255, 234);">col-8</div>
+            <div class="col-4" style="background-color: rgb(30, 255, 0);">col-4</div>
+        </div>
+    </div>
+    <br>
+
+    <!-- Сложено по горизонтали
+
+        Используя единый набор .col-sm-* классов, вы можете создать базовую систему сетки, 
+        которая начинается с накопления и становится горизонтальной в небольшой точке останова (sm).-->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8" style="background-color: rgb(30, 255, 0);">col-sm-8</div>
+            <div class="col-sm-4" style="background-color: rgb(255, 153, 0);">col-sm-4</div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm" style="background-color: rgb(255, 251, 0);">col-sm</div>
+            <div class="col-sm" style="background-color: rgb(255, 0, 0);">col-sm</div>
+            <div class="col-sm" style="background-color: rgb(17, 0, 255);">col-sm</div>
+        </div>
+    </div>
+    <br>
+
+    <!-- Смешивать и сочетать
+
+        Не хотите, чтобы ваши столбцы просто складывались в несколько ярусов сетки? 
+        При необходимости используйте комбинацию разных классов для каждого уровня. См. Пример 
+        ниже, чтобы лучше понять, как все это работает.-->
+
+    <div class="container">
+        <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+        <div class="row">
+            <div class="col-md-8" style="background-color: rgb(17, 0, 255);">.col-md-8</div>
+            <div class="col-6 col-md-4" style="background-color: rgb(200, 255, 0);">.col-6 .col-md-4</div>
+        </div>
+        <br>
+        <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+        <div class="row">
+            <div class="col-6 col-md-4" style="background-color: rgb(255, 230, 0);">.col-6 .col-md-4</div>
+            <div class="col-6 col-md-4" style="background-color: rgb(255, 38, 0);">.col-6 .col-md-4</div>
+            <div class="col-6 col-md-4" style="background-color: rgb(255, 0, 98);">.col-6 .col-md-4</div>
+        </div>
+        <br>
+        <!-- Columns are always 50% wide, on mobile and desktop -->
+        <div class="row">
+            <div class="col-6" style="background-color: rgb(255, 145, 0);">.col-6</div>
+            <div class="col-6" style="background-color: rgb(136, 255, 0);">.col-6</div>
+        </div>
+    </div>
+    <br>
+
+    <!-- Рядные столбцы
+
+        Используйте адаптивные .row-cols-* классы, чтобы быстро установить количество столбцов, 
+        которые лучше всего отображают ваш контент и макет. В то время как обычные .col-* классы 
+        применяются к отдельным столбцам (например, .col-md-4), классы столбцов строк устанавливаются 
+        для родительского элемента .row как ярлык. С помощью .row-cols-auto вы можете придать столбцам 
+        их естественную ширину.
+
+        Используйте эти классы столбцов строк, чтобы быстро создавать базовые макеты сетки или 
+        управлять макетами карточек.-->
+    <div class="container">
+        <div class="row row-cols-2">
+            <div class="col">Столбец</div>
+            <div class="col">Столбец</div>
+            <div class="col">Столбец</div>
+            <div class="col">Столбец</div>
+        </div>
+    </div>
+    <br>
+
+    <!-- Гнездование
+
+        Чтобы вложить контент в сетку по умолчанию, добавьте новый .row и набор .col-sm-* столбцов в 
+        существующий .col-sm-* столбец. Вложенные строки должны включать набор столбцов, которые в 
+        сумме составляют до 12 или меньше (не обязательно использовать все 12 доступных столбцов).-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3" style="background-color: rgb(136, 255, 0); height: 100px;">
+                Уровень 1: .col-sm-3
+            </div>
+            <div class="col-sm-9">
+                <div class="row">
+                    <div class="col-8 col-sm-6" style="background-color: rgb(255, 208, 0);">
+                        Уровень 2: .col-8 .col-sm-6
+                    </div>
+                    <div class="col-4 col-sm-6" style="background-color: rgb(255, 0, 0);">
+                        Уровень 2: .col-4 .col-sm-6
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

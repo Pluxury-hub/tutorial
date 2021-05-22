@@ -1,0 +1,29 @@
+/* list-style - стиль списка */
+#nav {
+	list-style: none;
+	display: block;
+	float: left;
+	width: 50%;
+	margin-left: 25%;
+	text-align: center;
+	margin-bottom: 50px; 
+}
+
+#nav li {
+	display: inline;
+	background-color: red;
+	border: 1px solid silver;
+	padding: 0 20px;
+	cursor: pointer;
+}
+
+#nav li:hover {
+	color: white;
+	background-color: black;
+	border-radius: 5px;
+	border-color: black;
+}
+
+#nav li:not(:last-of-type) {
+	margin-right: 20px; 
+}

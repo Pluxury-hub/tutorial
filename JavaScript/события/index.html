@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<!-- onclick - атрибут, который реагирует на нажатие -->
+	<!-- this - внутрь функции предаётся объект на который нажали -->
+	<button onclick="alert('Вы нажали на меня')">Нажми на меня</button>
+	<button name="mainButton" onclick="onClickButton(this)">Нажми на меня</button>
+
+	<!-- ondblclick - атрибут взаимодействует с двойным нажатием -->
+	<button ondblclick="onClickButton()">Нажми на меня</button>
+
+	<!-- onmouseover - при наведении -->
+	<button onmouseover="">Нажми на меня</button>
+
+	<!-- onmouseout - уведении мышки -->
+	<button onmouseout="">Нажми на меня</button>
+
+	<script src="script.js"></script>
+</body>
+</html>

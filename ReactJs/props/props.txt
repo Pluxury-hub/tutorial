@@ -1,0 +1,53 @@
+
+Компонента - это функция, возвращающая разметку (JSX)
+Компонента - это тег
+
+----------------------------------------------------------
+
+                    ПРИМЕР
+
+const Header = () => {
+	return(
+		<div>
+			<a>it-incubator.by</a>
+			<a>repositoria.net</a>
+			<a>it-kamasutra.com</a>
+		</div>);
+}
+
+---------------------------------------------------------------
+Функция вызывется с параметром
+props - имя параметра (соглашение React)
+
+const Header = (props) => {
+	return(
+		<div>
+			<a>it-incubator.by</a>
+			<a>repositoria.net</a>
+			<a>it-kamasutra.com</a>
+		</div>);
+}
+
+-------------------------------------------------------------
+не правильно
+let obj = {
+	name: 'Dima'
+}
+
+Header(obj );
+
+--------------------------------------------------------------
+
+<Header name='Dima K' age='30' />
+
+---------------------------------------------------------------
+
+const Header = (props) => {
+	return(
+		<div>
+			<span> {props.name}, {parops.age} </span>
+			<a>it-incubator.by</a>
+			<a>repositoria.net</a>
+			<a>it-kamasutra.com</a>
+		</div>);
+}

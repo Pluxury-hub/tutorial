@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- СТОЛБЦЫ
+
+    Узнайте, как изменять столбцы с помощью нескольких опций для выравнивания, упорядочивания и смещения благодаря нашей 
+    системе сеток flexbox. Кроме того, узнайте, как использовать классы столбцов для управления шириной элементов без сетки. 
+
+    
+    Как они работают
+
+    -Столбцы построены на архитектуре flexbox сетки. Flexbox означает, что у нас есть возможности для изменения отдельных 
+    столбцов и модификации групп столбцов на уровне строк. Вы выбираете, как столбцы увеличиваются, уменьшаются или изменяются 
+    иным образом.
+
+    -При построении макетов сетки все содержимое размещается в столбцах. Иерархия сетки Bootstrap идет от контейнера к строке, 
+    столбцу и содержимому. В редких случаях вы можете комбинировать контент и столбец, но помните, что это может иметь 
+    непредвиденные последствия.
+
+    -Bootstrap включает предопределенные классы для создания быстрых и отзывчивых макетов. С шестью точками останова и 
+    дюжиной столбцов на каждом уровне сетки у нас есть десятки классов, уже созданных для вас, чтобы создавать желаемые макеты. 
+    При желании это можно отключить через Sass.
+
+
+    Выравнивание
+
+    Используйте утилиты выравнивания flexbox для вертикального и горизонтального выравнивания столбцов.
+
+    Вертикальное выравнивание-->
+    <div class="container">
+        <div class="row" style="height: 100px;">
+            <div class="col align-self-start">
+                One of three columns
+            </div>
+            <div class="col align-self-center">
+                One of three columns
+            </div>
+            <div class="col align-self-end">
+                One of three columns
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <!-- Горизонтальное выравнивание -->
+    <div class="container">
+        <div class="row justify-content-start">
+            <div class="col-4">
+                One of two columns
+            </div>
+            <div class="col-4">
+                One of two columns
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-4">
+                One of two columns
+            </div>
+            <div class="col-4">
+                One of two columns
+            </div>
+        </div>
+        <div class="row justify-content-end">
+            <div class="col-4">
+                One of two columns
+            </div>
+            <div class="col-4">
+                One of two columns
+            </div>
+        </div>
+        <div class="row justify-content-around">
+            <div class="col-4">
+                One of two columns
+            </div>
+            <div class="col-4">
+                One of two columns
+            </div>
+        </div>
+        <div class="row justify-content-between">
+            <div class="col-4">
+                One of two columns
+            </div>
+            <div class="col-4">
+                One of two columns
+            </div>
+        </div>
+        <div class="row justify-content-evenly">
+            <div class="col-4">
+                One of two columns
+            </div>
+            <div class="col-4">
+                One of two columns
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <!-- Обертывание столбцов
+    Если в одной строке помещается более 12 столбцов, каждая группа дополнительных столбцов, 
+    как одно целое, переносится на новую строку. -->
+    <div class="container">
+        <div class="row">
+            <div class="col-9">.col-9</div>
+            <div class="col-4">.col-4<br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line
+                as one contiguous unit.</div>
+            <div class="col-6">.col-6<br>Subsequent columns continue along the new line.</div>
+        </div>
+    </div>
+    <hr>
+
+    <!-- Разрывы столбцов
+    Разбиение столбцов на новую строку в flexbox требует небольшого взлома: добавьте 
+    элемент, width: 100% где вы хотите перенести столбцы на новую строку. Обычно это достигается с 
+    помощью нескольких .row, но не каждый метод реализации может это учитывать. -->
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+            <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+
+            <!-- Force next columns to break to new line -->
+            <div class="w-100"></div>
+
+            <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+            <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+        </div>
+    </div>
+    <hr>
+
+    <!-- Вы также можете применить этот перерыв в определенных точках останова с помощью наших 
+    утилит адаптивного отображения  -->
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+            <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+
+            <!-- Force next columns to break to new line at md breakpoint and up -->
+            <div class="w-100 d-none d-md-block"></div>
+
+            <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+            <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+        </div>
+    </div>
+    <hr>
+
+
+    <!-- ---------------------------------------------------------------------------------- -->
+
+    <!-- Изменение порядка
+
+    Order классы
+    Используйте .order- классы для управления визуальным порядком вашего контента. 
+    Эти классы адаптивны, поэтому вы можете установить order точку 
+    останова (например, .order-1.order-md-2). Включает поддержку 1 сквозного 5 доступа на 
+    всех шести уровнях сетки. -->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                Первый
+            </div>
+            <div class="col order-5">
+                Второй
+            </div>
+            <div class="col order-1">
+                Третий
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <!-- Также существуют классы Response .order-first и, .order-last которые изменяют order 
+    значение элемента, применяя order: -1 и order: 6, соответственно. Эти классы также можно 
+    при необходимости смешивать с пронумерованными .order-* классами. -->
+    <div class="container">
+        <div class="row">
+            <div class="col order-last">
+                Первый
+            </div>
+            <div class="col">
+                Второй
+            </div>
+            <div class="col order-first">
+                Третий
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <!-- Смещение столбцов
+    Вы можете смещать столбцы сетки двумя способами: с помощью наших .offset- адаптивных классов 
+    сетки и наших margin утилит. Классы сетки имеют размер, соответствующий столбцам, в то время 
+    как поля более полезны для быстрых макетов, где ширина смещения является переменной.
+
+    Классы смещения
+    Переместите столбцы вправо с помощью .offset-md-* классов. Эти классы увеличивают левое поле 
+    столбца на *столбцы. Например, .offset-md-4 перемещается .col-md-4 по четырем столбцам. -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">.col-md-4</div>
+            <div class="col-md-4 offset-md-4">.col-md-4 .offset-md-4</div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 offset-md-3">.col-md-3 .offset-md-3</div>
+            <div class="col-md-3 offset-md-3">.col-md-3 .offset-md-3</div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 offset-md-3">.col-md-6 .offset-md-3</div>
+        </div>
+    </div>
+    <hr>
+
+    <!-- В дополнение к очистке столбца в ответных точках останова вам может потребоваться 
+    сбросить смещения. Посмотрите это в действии на примере сетки . -->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-5 col-md-6">.col-sm-5 .col-md-6</div>
+            <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">.col-sm-5 .offset-sm-2 .col-md-6 .offset-md-0</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-md-5 col-lg-6">.col-sm-6 .col-md-5 .col-lg-6</div>
+            <div class="col-sm-6 col-md-5 offset-md-2 col-lg-6 offset-lg-0">.col-sm-6 .col-md-5 .offset-md-2 .col-lg-6
+                .offset-lg-0</div>
+        </div>
+    </div>
+    <hr>
+
+    <!-- Margin утилиты
+    С переходом на flexbox в версии 4 вы можете использовать утилиты маржи, например, 
+    отталкивать соседние .mr-auto столбцы друг от друга. -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">.col-md-4</div>
+            <div class="col-md-4 ml-auto">.col-md-4 .ml-auto</div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 ml-md-auto">.col-md-3 .ml-md-auto</div>
+            <div class="col-md-3 ml-md-auto">.col-md-3 .ml-md-auto</div>
+        </div>
+        <div class="row">
+            <div class="col-auto mr-auto">.col-auto .mr-auto</div>
+            <div class="col-auto">.col-auto</div>
+        </div>
+    </div>
+    <hr>
+
+    <!-- Автономные классы столбцов
+    Эти .col-* классы могут быть также использованы вне некоторых .row дать элемент ширину 
+    специфической. Когда классы столбцов используются как непрямые дочерние элементы строки, 
+    отступы опускаются. -->
+    <div class="col-3 bg-light p-3 border">
+        .col-3: ширина 25%
+    </div>
+    <div class="col-sm-9 bg-light p-3 border">
+        .col-sm-9: ширина на 75% выше точки останова sm
+    </div>
+    <hr>
+
+    <!-- Эти классы можно использовать вместе с утилитами для создания гибких плавающих изображений. 
+        Обязательно заверните содержимое в .clearfix оболочку, чтобы очистить float, 
+        если текст короче. -->
+    <div class="clearfix">
+        <img src="..." class="col-md-6 float-md-right mb-3 ml-md-3" alt="...">
+
+        <p>
+            Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue. Fusce
+            dapibus, tellus ac cursus commodo, tortor mauris paddenstoel nibh, ut fermentum massa justo sit amet risus.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+
+        <p>
+            Sed posuere consectetur est at lobortis. Etiam porta sem malesuada magna mollis euismod. Duis mollis, est
+            non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Id nullam tellus relem amet
+            commodo telemque olemit. Sed posuere consectetur est at lobortis. Maecenas sed diam eget risus varius
+            blandit sit amet non magna. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+        </p>
+
+        <p>
+            Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. Pellentesque ornare sem lantaarnpaal
+            quam venenatis vestibulum. Donec sed odio dui. Maecenas faucibus mollis interdum. Nullam quis risus eget
+            urna salsa tequila vel eu leo. Donec id elit non mi porta gravida at eget metus.
+        </p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

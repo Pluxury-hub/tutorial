@@ -1,0 +1,12 @@
+
+
+
+/* дописуем .modules.css к файлу */
+.content {
+	grid-area: c;
+	background-color: #555;
+}
+
+.item {
+	color: black;
+}

@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@1,400;1,700&display=swap');
+/*text-align - размещение текста
+font-size - размер шрифта
+font-style - вид шрифта
+font-weight - жирность текста
+font-family - стиль шрифта
+
+text-transform - регистр шрифт
+word-spacing - пространство между словaми
+letter-spacing - пространство между символами
+line-height - расстояние между строками*/
+.main_text {
+	color: #000;
+	text-align: center;
+	font-size: 1.2em;
+	font-style: normal;
+	font-weight: 300;
+	font-family: 'Arvo', serif;
+
+	text-transform: lowercase;
+	word-spacing: 3px;
+	letter-spacing: 2px;
+	line-height: 50px;
+}

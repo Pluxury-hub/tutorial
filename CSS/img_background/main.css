@@ -1,0 +1,26 @@
+/*background-color - фоновый цвет
+background-image - фоновая картинка
+background-repeat - повторение фона*/
+
+/*body {
+	background-color: #ff69b7;
+	color: #15211b;
+	background-image: url('https://i.pinimg.com/originals/72/40/44/724044a79c050fac6ad0fa374fb3dc33.jpg');
+	background-repeat: no-repeat;
+	background-position: left;
+}*/
+
+/*background-size - размер
+	cover - 100% ширина
+background-attachment: fixed - фиксирует картинку от прокручивания*/
+#first {
+	color: white;
+	background: #ff69b7 url('https://i.pinimg.com/originals/72/40/44/724044a79c050fac6ad0fa374fb3dc33.jpg') no-repeat center center;
+	height: 500px;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+#second {
+	height: 2000px;
+}
