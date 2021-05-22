@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!-- Вывод 5 колонок в Bootstrap 5
+    Урок о том как при помощи Bootstrap 5 сетки вывести блок с пятью колонками.
+
+
+
+    В пятом бутстрапе в отличии от предыдущих верстий есть готовые css классы, позволяющие вывести 
+    5 колонок. 
+
+    HTML разметка
+    А теперь пример самой простой реализации.-->
+    <div class="container">
+        <div class="row row-cols-5">
+            <div class="col">
+                Столбец 1
+            </div>
+            <div class="col">
+                Столбец 2
+            </div>
+            <div class="col">
+                Столбец 3
+            </div>
+            <div class="col">
+                Столбец 4
+            </div>
+            <div class="col">
+                Столбец 5
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <!-- Более сложная реализация 5 колонок
+
+    Задача: Нужно на экранах более 992px (lg) вывести 5 колонок, на расширении экрана 
+    от 768 до 992px чтобы это складывалось в 3 колонки, а на экранах менее 768px складывалось в 2. 
+
+    Решение - сама разметка. -->
+    <div class="row row-cols-lg-5">
+        <div class="col col-md-4 col-6">
+            содержимое
+        </div>
+        <div class="col col-md-4 col-6">
+            содержимое
+        </div>
+        <div class="col col-md-4 col-6">
+            содержимое
+        </div>
+        <div class="col col-md-4 col-6">
+            содержимое
+        </div>
+        <div class="col col-md-4 col-6">
+            содержимое
+        </div>
+    </div>
+    <hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
